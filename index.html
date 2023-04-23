@@ -14,29 +14,23 @@
   </head>
   <body>
     <header>
-      <h1 class="text-center text-uppercase bg-secondary py-2">Your Invoice</h1>
+      <h1 class="text-white text-center text-uppercase bg-secondary py-2">
+        Your Invoice
+      </h1>
     </header>
     <main class="container">
-      <section class="mt-4">
-        <div class="card p-4">
-          <h5 class="text-center">Please Enter The data</h5>
+      <section class="my-5">
+        <div class="card p-4 bg-secondary-subtle">
+          <h5 class="text-white text-center bg-secondary py-2">
+            Please Enter The data
+          </h5>
           <!-- buyer input field  -->
           <div class="mx-4 my-3">
             <div class="input-group mb-3">
-              <button
-                class="btn btn-outline-secondary"
-                type="button"
-                id="button-addon1"
-              >
+              <span class="input-group-text" type="button" id="button-addon1">
                 Buyer Details
-              </button>
-              <input
-                type="text"
-                class="form-control"
-                placeholder=""
-                aria-label="Example text with button addon"
-                aria-describedby="button-addon1"
-              />
+              </span>
+              <textarea class="form-control" id="floatingTextarea"></textarea>
               <button
                 class="btn btn-outline-secondary"
                 type="button"
@@ -47,7 +41,9 @@
             </div>
           </div>
           <!-- item details input  -->
-          <h5 class="text-center mb-3">Enter the items details</h5>
+          <h5 class="text-center text-white mb-3 mt-3 bg-secondary py-2">
+            Enter the items details
+          </h5>
           <div class="w-50 mx-auto">
             <div class="input-group mb-3">
               <input
@@ -80,6 +76,12 @@
               <div class="btn btn-secondary">Add</div>
             </div>
           </div>
+        </div>
+      </section>
+      <!-- invoice section -->
+      <section>
+        <div class="card bg-secondary-subtle p-3">
+          <h4>Invoice:#98256272</h4>
         </div>
       </section>
     </main>
