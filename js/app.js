@@ -5,5 +5,9 @@ function getInputValueById(id) {
 
 document.getElementById("buyer-button").addEventListener("click", function () {
   const buyerInputValue = getInputValueById("buyer-input");
+
+  const buyerDetails = document.getElementById("buyer-details");
+  buyerDetails.innerText = buyerInputValue;
+  document.getElementById("buyer-input").value = "";
   console.log(buyerInputValue);
 });
