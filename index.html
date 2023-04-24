@@ -91,7 +91,7 @@
                     class="card p-3 bg-secondary text-white"
                     style="height: 10rem"
                   >
-                    <h5>Date: 24/04/2023</h5>
+                    <h5>Date: <span id="date"></span></h5>
                   </div>
                 </div>
                 <div class="col-md-4">
@@ -176,6 +176,10 @@
         </div>
       </section>
     </main>
+    <script>
+      const date = new Date();
+      document.getElementById("date").innerText = date.toLocaleDateString();
+    </script>
     <script src="js/app.js"></script>
   </body>
 </html>
