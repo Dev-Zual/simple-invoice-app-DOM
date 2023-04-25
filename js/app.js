@@ -58,6 +58,11 @@ document.getElementById("add-item-btn").addEventListener("click", function () {
   //set tax
   const taxField = document.getElementById("tax");
   taxField.innerText = tax;
+
+  //calculate grand total
+  const grandTotal = subTotal + tax;
+  const grandTotalField = document.getElementById("grand-total");
+  grandTotalField.innerText = grandTotal;
   console.log(tax);
 
   //function for clear all input
