@@ -19,6 +19,15 @@ document.getElementById("add-item-btn").addEventListener("click", function () {
   const qtyInputValue = getInputValueById("qty-input");
 
   //set the data in the table
+  const tableBody = document.getElementById("table-body");
 
+  const tr = document.createElement("tr");
+  tr.innerHTML = `
+<th scope="row">${nameInputValue}</th>
+<td>${priceInputValue}</td>
+<td>${qtyInputValue}</td>
+<td>@mdo</td>
+`;
+  tableBody.appendChild(tr);
   console.log(nameInputValue, priceInputValue, qtyInputValue);
 });
