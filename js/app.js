@@ -63,7 +63,10 @@ document.getElementById("add-item-btn").addEventListener("click", function () {
   const grandTotal = subTotal + tax;
   const grandTotalField = document.getElementById("grand-total");
   grandTotalField.innerText = grandTotal;
-  console.log(tax);
+
+  // display footer total amount
+  const footerTotal = document.getElementById("total-amount");
+  footerTotal.innerText = grandTotal;
 
   //function for clear all input
   clearInput("name-input");
