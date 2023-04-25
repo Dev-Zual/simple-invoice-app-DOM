@@ -8,6 +8,16 @@ function clearInput(id) {
   inputField.value = "";
 }
 
+function calculateSubTotal(id) {
+  const totals = document.getElementsByClassName(id);
+  let subTotal = 0;
+  for (const total of totals) {
+    const price = Number(total.innerText);
+    subTotal += price;
+  }
+  return subTotal;
+}
+
 document.getElementById("buyer-button").addEventListener("click", function () {
   const buyerInputValue = getInputValueById("buyer-input");
 
@@ -35,10 +45,14 @@ document.getElementById("add-item-btn").addEventListener("click", function () {
 <th scope="row">${nameInputValue}</th>
 <td>${priceInputValue}</td>
 <td>${qtyInputValue}</td>
-<td>${totalPrice}</td>
+<td class="item-total">${totalPrice}</td>
 `;
   tableBody.appendChild(tr);
-  console.log(nameInputValue, priceInputValue, qtyInputValue);
+
+  const subTotal = calculateSubTotal("item-total");
+  console.log(subTotal);
+  const subTotalField = document.getElementById("sub-total");
+  subTotalField.innerText = subTotal;
 
   //function for clear all input
   clearInput("name-input");
