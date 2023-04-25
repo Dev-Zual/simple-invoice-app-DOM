@@ -3,6 +3,11 @@ function getInputValueById(id) {
   return inputField.value;
 }
 
+function clearInput(id) {
+  const inputField = document.getElementById(id);
+  inputField.value = "";
+}
+
 document.getElementById("buyer-button").addEventListener("click", function () {
   const buyerInputValue = getInputValueById("buyer-input");
 
@@ -18,6 +23,10 @@ document.getElementById("add-item-btn").addEventListener("click", function () {
   const priceInputValue = getInputValueById("price-input");
   const qtyInputValue = getInputValueById("qty-input");
 
+  const priceInputNumber = Number(priceInputValue);
+  const qtyInputNumber = Number(qtyInputValue);
+  const totalPrice = priceInputNumber * qtyInputNumber;
+
   //set the data in the table
   const tableBody = document.getElementById("table-body");
 
@@ -26,8 +35,13 @@ document.getElementById("add-item-btn").addEventListener("click", function () {
 <th scope="row">${nameInputValue}</th>
 <td>${priceInputValue}</td>
 <td>${qtyInputValue}</td>
-<td>@mdo</td>
+<td>${totalPrice}</td>
 `;
   tableBody.appendChild(tr);
   console.log(nameInputValue, priceInputValue, qtyInputValue);
+
+  //function for clear all input
+  clearInput("name-input");
+  clearInput("price-input");
+  clearInput("qty-input");
 });
