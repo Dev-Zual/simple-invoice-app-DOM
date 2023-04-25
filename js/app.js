@@ -54,6 +54,12 @@ document.getElementById("add-item-btn").addEventListener("click", function () {
   const subTotalField = document.getElementById("sub-total");
   subTotalField.innerText = subTotal;
 
+  const tax = (2 / 100) * subTotal;
+  //set tax
+  const taxField = document.getElementById("tax");
+  taxField.innerText = tax;
+  console.log(tax);
+
   //function for clear all input
   clearInput("name-input");
   clearInput("price-input");
