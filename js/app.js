@@ -13,5 +13,12 @@ document.getElementById("buyer-button").addEventListener("click", function () {
 });
 
 document.getElementById("add-item-btn").addEventListener("click", function () {
-  console.log("done");
+  //get all the items input value
+  const nameInputValue = getInputValueById("name-input");
+  const priceInputValue = getInputValueById("price-input");
+  const qtyInputValue = getInputValueById("qty-input");
+
+  //set the data in the table
+
+  console.log(nameInputValue, priceInputValue, qtyInputValue);
 });
