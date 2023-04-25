@@ -11,3 +11,7 @@ document.getElementById("buyer-button").addEventListener("click", function () {
   document.getElementById("buyer-input").value = "";
   console.log(buyerInputValue);
 });
+
+document.getElementById("add-item-btn").addEventListener("click", function () {
+  console.log("done");
+});
